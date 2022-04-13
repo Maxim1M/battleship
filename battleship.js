@@ -1,6 +1,7 @@
-var lokation1 = 3;
-var lokation2 = 4;
-var lokation3 = 5;
+var randomLoc = Math.floor(Math.random() * 5);
+var lokation1 = randomLoc;
+var lokation2 = lokation1 + 1;
+var lokation3 = lokation2 + 1;
 
 var guess;
 var hits = 0;
