@@ -27,6 +27,7 @@ var model = {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
       var index = ship.locations.indexOf(guess);
+
       if (index >= 0) {
         ship.hits[index] = "hit";
         view.displayHit(guess);
@@ -49,5 +50,24 @@ var model = {
       }
     }
     return true;
+  }
+};
+
+var controller = {
+  guess: 0,
+  processGuess: function(guess) {
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+
+    if (guess === null || guess.lenght !== 2) {
+      alert("Oops, please enter a letter and a number on the board.");
+    } else {
+      firstChar = guess.charAt(0);
+      var row = alphabet.indexOf(firstChar);
+      var column = guess.charAt(1);
+
+      if (isNaN(row) || isNaN(column)) {
+        alert
+      }
+    }
   }
 };
